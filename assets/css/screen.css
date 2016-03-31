@@ -790,7 +790,7 @@ margin on the iframe, cause it breaks stuff. */
 
 #content .post-content { font-size: 1.8rem;}
 
-#content .post-content, #content .post-footer, #content #disqus_thread { padding: 0 4rem; }
+#content .post-content, #content .post-footer, #content #disqus_thread { word-break: break-word;padding: 0 4rem; }
 
 /* Post Footer */
 .post-footer { line-height: 1; }
