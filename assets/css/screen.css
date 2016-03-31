@@ -1014,7 +1014,7 @@ margin on the iframe, cause it breaks stuff. */
     .header-site, 
     .box_rosette { 
         margin: 2rem auto ; 
-        max-width: 540px;
+        max-width: 760px;
         width: auto; 
     }
     
