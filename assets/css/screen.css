@@ -283,7 +283,7 @@ pre {
     box-sizing: border-box;
     margin: 1.6em 0;
     width: 100%;
-    padding: 10px;
+    /*padding: 10px;*/
     font-family: Inconsolata, monospace, sans-serif;
     font-size: 0.9em;
     white-space: pre;
