@@ -35,3 +35,12 @@
   jQuery.fn[sr] = function(fn){  return fn ? this.bind('resize', debounce(fn)) : this.trigger(sr); };
 
 })(jQuery,'smartresize');
+
+window.addEventListener('load',function(){
+    var link = document.createElement('link');
+    link.src= "https://fonts.googleapis.com/css?family=Lato:100,300,300italic,400,700&subset=latin-ext";
+    link.rel = "stylesheet";
+    link.type = "text/css";
+    var link1 = document.getElementsByTagName('link')[0];
+    link1.parentNode.insertBefore(link,link1);
+})
