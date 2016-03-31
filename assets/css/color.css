@@ -1,0 +1,24 @@
+/* ==========================================================================
+   1. Color 
+   ========================================================================== */
+
+/* Green */
+#color,
+#color mark { background-color: #8bd558; }
+
+#color .post-content a,
+#color blockquote small,
+#color #disqus_thread  a,
+#color .header-site > a:hover,
+#color .box_rosette .article-list ul li h2 a:hover { color: #8bd558; }
+
+#color .box_rosette .post-excerpt .read-more,
+#color #content .post-footer .post-tags li a { color: #8bd558; border-color: #8bd558; }
+
+#color .box_rosette .post-excerpt .read-more:hover,
+#color #content .post-footer .post-tags li a:hover { background: #8bd558; }
+
+#color blockquote { border-left: #8bd558 5px solid; }
+
+#color .post-content a { border-bottom: 1px dotted #8bd558; }
+#color .post-content a:hover { border-bottom: 1px solid #8bd558; }

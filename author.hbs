@@ -1,0 +1,48 @@
+{{!< default}}
+              
+<div id="content" class="wrapper_rosette">
+
+    {{> header }}
+
+    <main role="main">
+        <a class="back" href="{{@blog.url}}"><i class="fa fa-long-arrow-left"></i><span>Back to the front page</span></a>
+
+        <div class="box_rosette">
+            
+            {{#author}}
+            <header class="top">
+                {{#if image}}
+                <figure class="author-image">
+                    <div class="img" style="background-image: url({{image}})"><span class="hidden_rosette">{{name}}'s Picture</span></div>
+                </figure>
+                {{/if}}
+                <section class="author-profile">
+                    <p>Author</p>
+                    <h1 class="author-title">{{name}}</h1>
+                    {{#if bio}}<h2 class="author-bio">{{bio}}</h2>{{/if}}
+                    {{#if location}}<span class="author-location">{{location}}</span>{{/if}}
+                    {{#if location}} 
+                        {{#if website}} 
+                            <span class="between">&#45;</span>
+                        {{/if}}
+                    {{/if}}
+                    {{#if website}}<span class="author-link"><a href="{{website}}">{{website}}</a></span>{{/if}}
+                </section>
+            </header>
+            {{/author}}
+            
+            <hr>
+            <section class="article-list">
+                 <ul>
+                {{#foreach posts}}
+                    <li>
+                        <h2 class="post-title"><a href="{{url}}">{{{title}}}</a></h2>
+                        <time class="post-date" datetime="{{date format='YYYY-MM-DD'}}">{{date format="DD MMM YYYY"}}</time>
+                    </li>
+                {{/foreach}}
+                </ul>
+            </section>
+        </div>
+        {{pagination}}
+    </main>
+</div>          

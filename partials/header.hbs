@@ -1,0 +1,11 @@
+<header class="header-site">
+    <h1 class="blog-title"><a href="{{@blog.url}}">{{@blog.title}}</a></h1>
+    {{#if @blog.description}}
+        <h2 class="blog-description">{{@blog.description}}</h2>
+    {{/if}}
+    <hr>
+    {{#if @blog.navigation}}
+        {{navigation}}
+    {{/if}}
+    {{> custom/social_media}}
+</header>

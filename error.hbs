@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+{{! Document Settings }}
+<meta http-equiv="Content-Type" content="text/html" charset="UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+ 
+{{! Page Meta }}
+<title>{{code}} — {{message}}</title>
+<link rel="shortcut icon" href="{{asset "/favicon.png"}}">
+<meta name="description" content="{{meta_description}}" />
+    	 
+{{! Styles }}
+<link rel="stylesheet" type="text/css" href="{{asset "css/screen.css"}}" />
+<link rel="stylesheet" type="text/css" href="{{asset "css/color.css"}}" />
+<link href='https://fonts.googleapis.com/css?family=Lato:100,300,300italic,400,700&subset=latin-ext' rel='stylesheet' type='text/css'>
+<link href='https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css' rel='stylesheet' type='text/css'>
+
+{{! Responsive Meta Tags }}
+<meta name="HandheldFriendly" content="True" />
+<meta name="MobileOptimized" content="320" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
+    
+</head>
+
+    
+<body id="color" class="{{body_class}}">
+    
+    <main id="error_rosette" class="wrapper_rosette" role="main">
+            <div class="inner-error">
+                <a class="back" href="{{@blog.url}}"><i class="fa fa-long-arrow-left"></i><span>Back to the front page</span></a>
+                <div class="top">
+
+                    <h1>Error: {{code}}</h1>
+                    <p>{{message}}</p>
+
+                    {{#if stack}}
+                    <section class="error-stack">
+                        <h3>Stack Trace</h3>
+                        <p><strong>{{message}}</strong></p>
+                        <ul class="error-stack-list">
+                            {{#foreach stack}}
+                                <li>
+                                    at
+                                    {{#if function}}<em class="error-stack-function">{{function}}</em>{{/if}}
+                                    <span class="error-stack-file">({{at}})</span>
+                                </li>
+                            {{/foreach}}
+                        </ul>
+                    </section>
+                    {{/if}}
+
+                </div> 
+            </div>
+        </main>
+    </div>
+    
+    {{> footer}}
+    
+</body>
+</html>

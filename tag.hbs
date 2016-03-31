@@ -1,0 +1,32 @@
+{{!< default}}
+              
+<div id="content" class="wrapper_rosette">
+
+    {{> header }}
+
+    <main role="main">
+        <a class="back" href="{{@blog.url}}"><i class="fa fa-long-arrow-left"></i><span>Back to the front page</span></a>
+        
+        <div class="box_rosette">
+            
+            <section class="top">
+                <span>{{plural pagination.total empty='No posts' singular='% post' plural='% posts'}} tagged &#58;</span>
+                <h1 class="page-title">{{tag.name}}</h1>
+                {{#if tag.description}}<h2 class="description">{{tag.description}}</h2>{{/if}}
+            </section>
+            <hr>
+        
+            <section class="article-list">              
+                <ul>
+                {{#foreach posts}}
+                    <li>
+                        <h2 class="post-title"><a href="{{url}}">{{{title}}}</a></h2>
+                        <time class="post-date" datetime="{{date format='YYYY-MM-DD'}}">{{date format="DD MMM YYYY"}}</time>
+                    </li>
+                {{/foreach}}
+                </ul>
+            </section>
+        </div>
+        {{pagination}}
+    </main>
+</div>                      
