@@ -35,6 +35,7 @@
   jQuery.fn[sr] = function(fn){  return fn ? this.bind('resize', debounce(fn)) : this.trigger(sr); };
 
 })(jQuery,'smartresize');
+hljs.initHighlightingOnLoad();
 /*
 window.addEventListener('load',function(){
     var link = document.createElement('link');
