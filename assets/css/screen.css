@@ -446,7 +446,7 @@ margin on the iframe, cause it breaks stuff. */
     margin: 0 0 3rem 0;
     padding: 6rem 0 3rem;
     border-radius: 6px;
-    width: 540px;
+    width: 720px;
     -webkit-box-shadow: 0 0 8px 0 rgba(0,0,0,0.25);
     box-shadow: 0 0 8px 0 rgba(0,0,0,0.25);
 }
@@ -1014,7 +1014,7 @@ margin on the iframe, cause it breaks stuff. */
     .header-site, 
     .box_rosette { 
         margin: 2rem auto ; 
-        max-width: 760px;
+        max-width: 540px;
         width: auto; 
     }
     
